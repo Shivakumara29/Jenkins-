@@ -6,6 +6,7 @@ Jenkins requires Java to run, yet not all Linux distributions include Java by de
 
 There are multiple Java implementations which you can use. OpenJDK is the most popular one at the moment, we will use it in this guide.
 Update the Debian apt repositories, install OpenJDK 21, and check the installation with the commands:
+----------------------------------------------------------------
 sudo apt update
 sudo apt install fontconfig openjdk-21-jre
 java -version
@@ -33,3 +34,9 @@ echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 sudo apt-get update
 sudo apt-get install jenkins
+----------------------------------------------------------
+sudo systemctl status jenkins
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+
+
